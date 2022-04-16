@@ -16,7 +16,7 @@ class Home extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
-        onPressed: () => {controller.increment()},
+        onPressed: () => {controller.connectAndQuery()},
       ),
     );
   }
