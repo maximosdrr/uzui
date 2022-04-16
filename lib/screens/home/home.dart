@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:get/instance_manager.dart';
 import 'package:uzui/screens/home/home.controller.dart';
+
+import 'components/sidebar.component.dart';
 
 class Home extends StatelessWidget {
   Home({Key? key}) : super(key: key);
@@ -11,8 +12,17 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Obx(() => Text("Hello World ${controller.counter}")),
+      body: SizedBox(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: Row(
+          children: [
+            HomeSidebar(),
+            // Container(
+            //   child: Text("Hello world!"),
+            // )
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
