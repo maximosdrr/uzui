@@ -10,18 +10,24 @@ class ConnectionManager extends StatelessWidget {
 
   ConnectionManager({Key? key}) : super(key: key);
 
-  final conns = ["Conn A", "Conn B", "Conn C"];
-
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 200,
-      child: ListView.builder(
-        itemCount: conns.length,
-        itemBuilder: (_, i) => ConnectionManagerItem(
-          title: conns[i],
-          index: i,
+    return Scaffold(
+      body: SizedBox(
+        height: 200,
+        child: Obx(
+          () => ListView.builder(
+            itemCount: connectionManagerController.connections.length,
+            itemBuilder: (_, i) => ConnectionManagerItem(
+              connectionData: connectionManagerController.connections[i],
+              index: i,
+            ),
+          ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {},
       ),
     );
   }

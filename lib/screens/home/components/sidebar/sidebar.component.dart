@@ -20,7 +20,7 @@ class HomeSidebar extends StatelessWidget {
         destinations: const [
           NavigationRailDestination(
             icon: Icon(Icons.web),
-            label: Text('Manage your connections'),
+            label: Text('Connections'),
           ),
           NavigationRailDestination(
             icon: Icon(Icons.manage_search),
