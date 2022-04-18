@@ -14,6 +14,7 @@ class Uzui extends StatelessWidget {
       theme: appTheme,
       initialRoute: "/",
       getPages: router,
+      darkTheme: ThemeData.dark(),
     );
   }
 }
