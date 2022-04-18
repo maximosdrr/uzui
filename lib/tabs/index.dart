@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:uzui/screens/home/components/connection-manager/connection-manager.dart';
-import 'package:uzui/screens/home/components/sidebar/sidebar.controller.dart';
+import 'package:uzui/tabs/tab.controller.dart';
+
+import 'connection-manager/connection-manager.dart';
 
 class ViewList extends StatelessWidget {
   ViewList({Key? key}) : super(key: key);
-  final SidebarController sidebarController = Get.find();
+  final TabsController tabsController = Get.find();
 
   final List<Widget> views = [
     ConnectionManager(),
@@ -14,11 +15,11 @@ class ViewList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(() {
-      if (sidebarController.selectedView.value > views.length - 1) {
+      if (tabsController.selectedView.value > views.length - 1) {
         return const Center(child: Text("Route not found"));
       }
 
-      return views[sidebarController.selectedView.value];
+      return views[tabsController.selectedView.value];
     });
   }
 }

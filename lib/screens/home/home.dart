@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
-import 'package:uzui/screens/home/components/view-list/view-list.dart';
+import 'package:uzui/tabs/index.dart';
 import 'package:uzui/screens/home/home.controller.dart';
 
 import 'components/sidebar/sidebar.component.dart';

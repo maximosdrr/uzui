@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:uzui/screens/home/components/sidebar/sidebar.controller.dart';
-import 'package:uzui/screens/home/home.controller.dart';
+import 'package:uzui/tabs/tab.controller.dart';
 
 class HomeSidebar extends StatelessWidget {
-  final SidebarController sidebarController = Get.find();
+  final TabsController tabController = Get.find();
 
   HomeSidebar({Key? key}) : super(key: key);
 
@@ -12,10 +11,10 @@ class HomeSidebar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(
       () => NavigationRail(
-        selectedIndex: sidebarController.selectedView.value,
+        selectedIndex: tabController.selectedView.value,
         extended: true,
         onDestinationSelected: (v) async {
-          sidebarController.selectedView(v);
+          tabController.selectedView(v);
         },
         destinations: const [
           NavigationRailDestination(

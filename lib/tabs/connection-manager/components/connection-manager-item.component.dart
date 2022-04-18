@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:get/instance_manager.dart';
-import 'package:uzui/screens/home/components/connection-manager/connection-manager.controller.dart';
-import 'package:uzui/screens/home/components/connection-manager/interfaces/connection.interface.dart';
+
+import '../connection-manager.controller.dart';
+import '../interfaces/connection.interface.dart';
 
 class ConnectionManagerItem extends StatelessWidget {
   final ConnectionData connectionData;

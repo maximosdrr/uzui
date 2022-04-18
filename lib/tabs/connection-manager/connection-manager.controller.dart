@@ -1,5 +1,6 @@
 import 'package:get/state_manager.dart';
-import 'package:uzui/screens/home/components/connection-manager/interfaces/connection.interface.dart';
+
+import 'interfaces/connection.interface.dart';
 
 class ConnectionManagerController extends GetxController {
   RxList<ConnectionData> connections = <ConnectionData>[].obs;
