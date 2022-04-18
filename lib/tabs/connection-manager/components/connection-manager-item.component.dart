@@ -23,7 +23,7 @@ class ConnectionManagerItem extends StatelessWidget {
       cursor: SystemMouseCursors.click,
       child: ListTile(
         onTap: () {
-          controller.updateItemStatus(index);
+          print("Open modal with connection details");
         },
         title: Text(connectionData.alias),
         trailing: SizedBox(
